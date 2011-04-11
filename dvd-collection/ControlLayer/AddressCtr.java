@@ -1,6 +1,7 @@
 package ControlLayer;
+
 import java.util.ArrayList;
-//model layer package has to be imported
+import ModelLayer.*;
 
 /**
  * Controller class for the address book
@@ -13,37 +14,81 @@ import java.util.ArrayList;
 public class AddressCtr
 {
     
-    //declare instance variables to reference containers
-    //passed as arguments from the main class
+    private AddressBook addressBook;
+    //private static AddressCtr instance = null;
     
-    //Address container is to be passed as parameter from the main controller
-    public AddressCtr(/*---*/)
+//     /**
+//      * Singleton
+//      */
+//     public static AddressCtr getInstance()
+//     {
+//         if(instance == null)
+//         {
+//             instance = new AddressCtr();
+//         }
+//         return instance;
+//     }
+    
+    /**
+     * Constructor for creating AddressCtr
+     */
+    public AddressCtr()
     {
+        addressBook = addressBook.getInstance();
     }
     
-    //Dummy implementation: after implementing the model layer 
-    //objects of class Person are to be returned, not String
-    public String getPerson(long id)
+    /**
+     * Method for printing out information about a Person
+     * 
+     * @param   id  Instance variable for Person object
+     * @return  p   Person object
+     */
+    public Person getPerson(int id)
     {
-        //this method is to search the container for a person
-        //with an id-number equal to the parameter id
-        //when person is found, the method is to call print-methods in the TUI layer
-        return "person";
+        return addressBook.findPerson(id);
     }
     
     
-    public void createPerson(long id, String name, String address, String postalCode, String city, String phone)
+    public void createPerson(int id, String name, String address, int zip, String city, String phoneNumber)
     {   
-       //creates a Person object and stores it in the container
+        Person p = new Person(id, name, address, zip, city, phoneNumber);
+        addressBook.addPerson(p);
     }
     
-    public void deletePerson(long id)
+    public void deletePerson(int id)
     {
-        //search for the person and delete the object from the container
+        Person p = addressBook.findPerson(id);
+        if(p != null)
+        {
+            addressBook.removePerson(p);
+        }
     }
     
-    public void updatePerson(long id)
+    public void updatePerson(int id, String name, String address, int zip, String city, String phoneNumber)
     {
+        if(addressBook.findPerson(id) != null)
+        {
+            if(name != null)
+            {
+                addressBook.findPerson(id).setName(name);
+            }
+            if(address != null)
+            {
+                addressBook.findPerson(id).setAddress(address);
+            }
+            if(zip != 0)
+            {
+                addressBook.findPerson(id).setZip(zip);
+            }
+            if(city != null)
+            {
+                addressBook.findPerson(id).setCity(city);
+            }
+            if(phoneNumber != null)
+            {
+                addressBook.findPerson(id).setPhoneNumber(phoneNumber);
+            }
+        }
     }
     
     public ArrayList listAllPersons()

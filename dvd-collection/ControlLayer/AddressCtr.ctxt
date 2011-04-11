@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.params=
 comment0.target=AddressCtr()
+comment0.text=\r\n\ Constructor\ for\ creating\ AddressCtr\r\n
 comment1.params=id
-comment1.target=java.lang.String\ getPerson(long)
-comment2.params=id\ name\ address\ postalCode\ city\ phone
-comment2.target=void\ createPerson(long,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.target=ModelLayer.Person\ getPerson(int)
+comment1.text=\r\n\ Method\ for\ printing\ out\ information\ about\ a\ Person\r\n\ \r\n\ @param\ \ \ id\ \ Instance\ variable\ for\ Person\ object\r\n\ @return\ \ p\ \ \ Person\ object\r\n
+comment2.params=id\ name\ address\ zip\ city\ phoneNumber
+comment2.target=void\ createPerson(int,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
 comment3.params=id
-comment3.target=void\ deletePerson(long)
-comment4.params=id
-comment4.target=void\ updatePerson(long)
+comment3.target=void\ deletePerson(int)
+comment4.params=id\ name\ address\ zip\ city\ phoneNumber
+comment4.target=void\ updatePerson(int,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
 comment5.params=
 comment5.target=java.util.ArrayList\ listAllPersons()
 numComments=6
