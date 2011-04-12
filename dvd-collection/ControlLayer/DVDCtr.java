@@ -63,15 +63,31 @@ public class DvdCtr
        
     }
     
-    public void createCopy(long id)
+    public String createCopy(int serialNo, String buyDate, double buyPrice, int id)
     {
-        //create a copy of the specified dvd and add it to the dvd
+        String returnString = "";
+        Copy c = new Copy(serialNo, buyDate, buyPrice);
+        if(dvdCollection.findDvd(id) != null)
+        {
+            dvdCollection.findDvd(id).addCopy(c);
+            returnString = "Copy added successfully";
+        }
+        else
+        {
+            returnString = "DVD not found"; 
+        }
+        return returnString;
     }
     
     
-    public ArrayList listAllDvds()
+    public String listAllDvds()
     {
-          //returns a list of all dvds and their associated copies
-          return null;
+          ArrayList<Dvd> dvdList = dvdCollection.getDvds();
+          String returnString = "";
+          for(Dvd d : dvdList)
+          {
+              returnString += d.print() + "\n";
+          }
+          return returnString;
     }
 }

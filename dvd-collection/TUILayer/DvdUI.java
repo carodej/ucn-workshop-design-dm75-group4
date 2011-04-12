@@ -1,6 +1,7 @@
 package TUILayer;
 import java.util.Scanner;
 import ControlLayer.DvdCtr;
+import java.util.ArrayList;
 /**
  * User interface to the DVD controller
  * @author(kbh)
@@ -81,10 +82,9 @@ public class DvdUI
    private void returnToMenu()
    {
        Scanner keyboard = new Scanner(System.in);
-       System.out.print("Press any key to return");
-       int choise = keyboard.nextInt();
-       writeDvdMenu();
-       
+       System.out.println(" (?) Return");
+       System.out.print("\n Enter any number to return: ");
+       keyboard.next();
    }
     
     private int inputDvdId()
@@ -124,21 +124,33 @@ public class DvdUI
     {
         // creates an object keyboard to read data from the keyboard
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Type the copy number: ");
-        int no = keyboard.nextInt();
-        return no;
+        System.out.println("Type the copy serial number: ");
+        int serialNo = keyboard.nextInt();
+        return serialNo;
     }
     
-    //there is need for more methods to read information about DVDs
-    //and methods to display the information
+    private String inputBuyDate()
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Type the copy aquisition date: ");
+        String buyDate = keyboard.nextLine();
+        return buyDate;
+    }
+    
+    private double inputBuyPrice()
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Type the copy aquisition price: ");
+        double buyPrice = keyboard.nextDouble();
+        return buyPrice;
+    }
   
     private void findDvd()
     {     
         int id = inputDvdId();
         String dvd = dvdCtr.getDvd(id);
         System.out.println(dvd);
-        returnToMenu();
-        
+        returnToMenu();    
     }
     
     private void createDvd()
@@ -152,6 +164,14 @@ public class DvdUI
     
     private void createCopy()
     {
+        int serialNo = inputCopyNo();
+        String buyDate = inputBuyDate();
+        double buyPrice = inputBuyPrice();
+        int dvdId = inputDvdId();
+        
+        String result = dvdCtr.createCopy(serialNo, buyDate, buyPrice, dvdId);
+        System.out.println(result);
+        returnToMenu();
     }
     
     private void deleteDVD()
@@ -159,5 +179,7 @@ public class DvdUI
     }
     private void listAllDvds()
     {
+        System.out.println(dvdCtr.listAllDvds());
+        returnToMenu();
     }
 }
