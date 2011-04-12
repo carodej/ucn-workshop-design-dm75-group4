@@ -20,12 +20,11 @@ public class AddressBookUI
     //constructor which does nothing
     public AddressBookUI()
     {
-       
+        addrCtr = AddressCtr.getInstance();
     }
     
     public void start()
     {
-       
         addressMenu();
     }
     

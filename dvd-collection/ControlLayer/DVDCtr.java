@@ -1,5 +1,6 @@
 package ControlLayer;
 import java.util.ArrayList;
+import ModelLayer.*;
 //model layer package has to be imported
 /**
  * Controller class for the DVD collection
@@ -10,35 +11,49 @@ import java.util.ArrayList;
  * (FEN): 2006.03.21: Some changes to the architecture in order to assure layering
  *                    and loose coupling
  */
-public class DVDCtr
+public class DvdCtr
 {
-    //declare instance variables to reference containers
-    //passed as arguments from the main class
+    private static DvdCtr instance = null;
+    private DvdCollection dvdCollection; 
 
+    public static DvdCtr getInstance()
+    {
+         if(instance == null)
+         {
+             instance = new DvdCtr();
+         }
+         return instance;
+    }
+    
     /**
      * Constructor for objects of class DVDCtr
      */
-    public DVDCtr()//DVD container is to be passed as parameter from the main controller
+    private DvdCtr()
     {
-        //set up references to containers    
+        dvdCollection = dvdCollection.getInstance();   
     }
     
     //Dummy implementation: after implementing the model layer 
     //objects of class DVD are to be returned, not String
-    public String findDVD( int no)
+    public String getDvd(int id)
     {
-        //this method is to search the container for a DVD
-        //with an id-number equal to the parameter no
-        //when the dvd is found, the method is to call print-methods in the TUI layer
-       
-       return "dvd"; 
+        String returnString = "";
+        if(dvdCollection.findDvd(id) != null)
+        {
+            returnString = dvdCollection.findDvd(id).print();
+        }
+        else
+        {
+            returnString = "No DVD found";
+        }
+        return returnString;
     }
     
     //Dummy implementation: more parameters are probaly to added
-    public void createDVD(String dvd)
+    public void createDvd(int id, String title, String director, String releaseDate)
     {       
-          //this method constructs a new dvd object 
-          //and stores it in the container
+          Dvd d = new Dvd(id, title, director, releaseDate);
+          dvdCollection.addDvd(d);
     }
     
     public void deleteDVD(long id)
