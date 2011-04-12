@@ -82,6 +82,7 @@ public class MainMenuUI
     private void startDvd()
     {
         dvdUI= new DvdUI();
+        dvdUI.start();
         //the DvdUI needs to have a reference to the DVD controller
         //main controller can return references to the other controllers
      

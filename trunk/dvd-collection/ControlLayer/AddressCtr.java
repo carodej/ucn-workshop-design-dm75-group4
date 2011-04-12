@@ -14,25 +14,25 @@ import ModelLayer.*;
 public class AddressCtr
 {
     
+    private static AddressCtr instance = null;
     private AddressBook addressBook;
-    //private static AddressCtr instance = null;
     
-//     /**
-//      * Singleton
-//      */
-//     public static AddressCtr getInstance()
-//     {
-//         if(instance == null)
-//         {
-//             instance = new AddressCtr();
-//         }
-//         return instance;
-//     }
+     /**
+      * Singleton
+      */
+     public static AddressCtr getInstance()
+     {
+         if(instance == null)
+         {
+             instance = new AddressCtr();
+         }
+         return instance;
+     }
     
     /**
      * Constructor for creating AddressCtr
      */
-    public AddressCtr()
+    private AddressCtr()
     {
         addressBook = addressBook.getInstance();
     }
@@ -43,9 +43,9 @@ public class AddressCtr
      * @param   id  Instance variable for Person object
      * @return  p   Person object
      */
-    public Person getPerson(int id)
+    public String getPerson(int id)
     {
-        return addressBook.findPerson(id);
+        return addressBook.findPerson(id).print();
     }
     
     
