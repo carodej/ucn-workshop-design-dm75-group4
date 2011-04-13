@@ -88,7 +88,7 @@
 				supplier   	"SYSTEM"
 				quidu      	"4DA43C6E0112"
 				messages   	(list Messages
-				    (object Message "createLoan(id, date, period, status)"
+				    (object Message "createLoan(date, period, status, copy, person)"
 					quid       	"4DA43C8302EB"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
@@ -97,12 +97,12 @@
 					ordinal    	0
 					quidu      	"000000000000"
 					creation   	FALSE)
-				    (object Message "findLoan(id)"
+				    (object Message "getLoan(id)"
 					quid       	"4DA43CF80251"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"3"
+					sequence   	"2"
 					ordinal    	2
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -111,7 +111,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"5"
+					sequence   	"3"
 					ordinal    	4
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -120,7 +120,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"7"
+					sequence   	"4"
 					ordinal    	6
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -129,7 +129,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"2"
+					sequence   	"1.1"
 					ordinal    	1
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -138,7 +138,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"4"
+					sequence   	"2.1"
 					ordinal    	3
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -147,7 +147,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"6"
+					sequence   	"3.1"
 					ordinal    	5
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -156,7 +156,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"8"
+					sequence   	"4.1"
 					ordinal    	7
 					quidu      	"000000000000"
 					creation   	FALSE))))
@@ -213,7 +213,7 @@
 			fill_color 	13434879
 			quidu      	"4DA43C6D002A"
 			width      	300
-			height     	1648
+			height     	1135
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -222,58 +222,58 @@
 			    location   	(491, 397)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	112
+			    y_coord    	22
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @4
-			    location   	(491, 597)
+			    location   	(491, 502)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @5
-			    location   	(491, 770)
+			    location   	(491, 642)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	119
+			    y_coord    	29
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @6
-			    location   	(491, 946)
+			    location   	(491, 747)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @7
-			    location   	(491, 1123)
+			    location   	(491, 904)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	112
+			    y_coord    	22
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @8
-			    location   	(491, 1311)
+			    location   	(491, 1009)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @9
-			    location   	(491, 1501)
+			    location   	(491, 1151)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	119
+			    y_coord    	29
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @10
-			    location   	(491, 1693)
+			    location   	(491, 1256)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE))
 		    (object InterObjView "SYSTEM" @11
 			location   	(1844, 225)
 			font       	(object Font
@@ -299,7 +299,7 @@
 			fill_color 	13434879
 			quidu      	"4DA43C6E0112"
 			width      	300
-			height     	1648
+			height     	1135
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -308,59 +308,31 @@
 			    location   	(1844, 397)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @13
-			    location   	(1844, 597)
+			    location   	(1844, 642)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @14
-			    location   	(1844, 770)
+			    location   	(1844, 904)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @15
-			    location   	(1844, 946)
+			    location   	(1844, 1151)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @16
-			    location   	(1844, 1123)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @17
-			    location   	(1844, 1311)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @18
-			    location   	(1844, 1501)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @19
-			    location   	(1844, 1693)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE))
-		    (object InterMessView "createLoan(id, date, period, status)" @20
+		    (object InterMessView "createLoan(date, period, status, copy, person)" @16
 			location   	(0, 397)
 			font       	(object Font
 			    size       	10
@@ -371,9 +343,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @21
-			    Parent_View 	@20
-			    location   	(1167, 353)
+			label      	(object SegLabel @17
+			    Parent_View 	@16
+			    location   	(1163, 366)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -386,11 +358,11 @@
 			    quidu      	"4DA43C8302EB"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	672
+			    max_width  	881
 			    justify    	0
-			    label      	"createLoan(id, date, period, status)"
-			    pctDist    	0.500000
-			    height     	45
+			    label      	"createLoan(date, period, status, copy, person)"
+			    pctDist    	0.497731
+			    height     	32
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
@@ -400,8 +372,8 @@
 			origin     	(506, 397)
 			terminus   	(1828, 397)
 			ordinal    	0)
-		    (object InterMessView "findLoan(id)" @22
-			location   	(0, 770)
+		    (object InterMessView "getLoan(id)" @18
+			location   	(0, 642)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -411,9 +383,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @23
-			    Parent_View 	@22
-			    location   	(1167, 726)
+			label      	(object SegLabel @19
+			    Parent_View 	@18
+			    location   	(1169, 608)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -426,22 +398,22 @@
 			    quidu      	"4DA43CF80251"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	250
+			    max_width  	244
 			    justify    	0
-			    label      	"findLoan(id)"
-			    pctDist    	0.500000
-			    height     	45
+			    label      	"getLoan(id)"
+			    pctDist    	0.501513
+			    height     	35
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@5
-			Focus_Entry 	@14
-			origin     	(506, 770)
-			terminus   	(1828, 770)
+			Focus_Entry 	@13
+			origin     	(506, 642)
+			terminus   	(1828, 642)
 			ordinal    	2)
-		    (object InterMessView "updateLoan(id)" @24
-			location   	(0, 1123)
+		    (object InterMessView "updateLoan(id)" @20
+			location   	(0, 904)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -451,9 +423,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @25
-			    Parent_View 	@24
-			    location   	(1167, 1079)
+			label      	(object SegLabel @21
+			    Parent_View 	@20
+			    location   	(1167, 871)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -470,18 +442,18 @@
 			    justify    	0
 			    label      	"updateLoan(id)"
 			    pctDist    	0.500000
-			    height     	45
+			    height     	34
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@7
-			Focus_Entry 	@16
-			origin     	(506, 1123)
-			terminus   	(1828, 1123)
+			Focus_Entry 	@14
+			origin     	(506, 904)
+			terminus   	(1828, 904)
 			ordinal    	4)
-		    (object InterMessView "deleteLoan(id)" @26
-			location   	(0, 1501)
+		    (object InterMessView "deleteLoan(id)" @22
+			location   	(0, 1151)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -491,9 +463,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @27
-			    Parent_View 	@26
-			    location   	(1167, 1457)
+			label      	(object SegLabel @23
+			    Parent_View 	@22
+			    location   	(1167, 1118)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -510,18 +482,18 @@
 			    justify    	0
 			    label      	"deleteLoan(id)"
 			    pctDist    	0.500000
-			    height     	45
+			    height     	34
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@9
-			Focus_Entry 	@18
-			origin     	(506, 1501)
-			terminus   	(1828, 1501)
+			Focus_Entry 	@15
+			origin     	(506, 1151)
+			terminus   	(1828, 1151)
 			ordinal    	6)
-		    (object Label @28
-			location   	(2099, 116)
+		    (object Label @24
+			location   	(2100, 84)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -532,7 +504,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			nlines     	33
-			max_width  	1457
+			max_width  	1537
 			justify    	1
 			label      	
 |Operations kontrakter:
@@ -544,9 +516,9 @@
 |Post-betingelser:
 |- et loanobjekt lend blev oprettet
 |- loan blev associeret til c
-|- loan.id, loan.date, loan.period, loan.status er blevet tilskrevet værdier
+|- loan.date, loan.period, loan.status loan.copy, loan.person er blevet tilskrevet værdier
 |
-|Operation: findLoan(id)
+|Operation: getLoan(id)
 |Use case: håndter Loan - CRUD
 |Type: Read
 |Pre-betingelser: Loanobjekt er oprettet og tilføjet til Collection c
@@ -567,8 +539,8 @@
 |Post-betingelser:
 |- loanobjektet loan er blevet slettet fra Collection c
 			)
-		    (object InterMessView "system return created" @29
-			location   	(0, 597)
+		    (object InterMessView "system return created" @25
+			location   	(0, 502)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -578,9 +550,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @30
-			    Parent_View 	@29
-			    location   	(1168, 553)
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(1169, 471)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -596,19 +568,19 @@
 			    max_width  	444
 			    justify    	0
 			    label      	"system return created"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.498865
+			    height     	32
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@13
+			Focus_Src  	@12
 			Focus_Entry 	@4
-			origin     	(1828, 597)
-			terminus   	(507, 597)
+			origin     	(1828, 502)
+			terminus   	(507, 502)
 			ordinal    	1)
-		    (object InterMessView "system return loanobjekt" @31
-			location   	(0, 946)
+		    (object InterMessView "system return loanobjekt" @27
+			location   	(0, 747)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -618,9 +590,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @32
-			    Parent_View 	@31
-			    location   	(1168, 902)
+			label      	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(1168, 723)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -636,19 +608,19 @@
 			    max_width  	501
 			    justify    	0
 			    label      	"system return loanobjekt"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.500378
+			    height     	25
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@15
+			Focus_Src  	@13
 			Focus_Entry 	@6
-			origin     	(1828, 946)
-			terminus   	(507, 946)
+			origin     	(1828, 747)
+			terminus   	(507, 747)
 			ordinal    	3)
-		    (object InterMessView "system return updated" @33
-			location   	(0, 1311)
+		    (object InterMessView "system return updated" @29
+			location   	(0, 1009)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -658,9 +630,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @34
-			    Parent_View 	@33
-			    location   	(1168, 1267)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(1168, 985)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -676,19 +648,19 @@
 			    max_width  	456
 			    justify    	0
 			    label      	"system return updated"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.499622
+			    height     	25
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@17
+			Focus_Src  	@14
 			Focus_Entry 	@8
-			origin     	(1828, 1311)
-			terminus   	(507, 1311)
+			origin     	(1828, 1009)
+			terminus   	(507, 1009)
 			ordinal    	5)
-		    (object InterMessView "system return deleted" @35
-			location   	(0, 1693)
+		    (object InterMessView "system return deleted" @31
+			location   	(0, 1256)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -698,9 +670,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @36
-			    Parent_View 	@35
-			    location   	(1168, 1649)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(1169, 1233)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -716,16 +688,16 @@
 			    max_width  	444
 			    justify    	0
 			    label      	"system return deleted"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.498865
+			    height     	24
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@19
+			Focus_Src  	@15
 			Focus_Entry 	@10
-			origin     	(1828, 1693)
-			terminus   	(507, 1693)
+			origin     	(1828, 1256)
+			terminus   	(507, 1256)
 			ordinal    	7)))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"4DA2E5F90298"
