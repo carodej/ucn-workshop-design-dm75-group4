@@ -20,6 +20,7 @@ public class MainMenuUI
   //the reference to the ControlLayer
    private AddressBookUI adrUI;//references to other UI objects
    private DvdUI dvdUI;
+   private LoanUI loanUI;
    
    public MainMenuUI()
    {
@@ -43,8 +44,8 @@ public class MainMenuUI
                     }
                     else{
                         if(choise == 3){
-                        //start loanController 
-                            }//end if
+                            startLoan();
+                        }
                         else{
                             writeEnd();
                             exit = true;
@@ -74,19 +75,20 @@ public class MainMenuUI
     {
         adrUI= new AddressBookUI();
         adrUI.start();
-        //the adrUI needs to have a reference to the address controller
-        //main controller can return references to the other controllers
-     
     }
 
     private void startDvd()
     {
         dvdUI= new DvdUI();
         dvdUI.start();
-        //the DvdUI needs to have a reference to the DVD controller
-        //main controller can return references to the other controllers
-     
     }
+    
+    private void startLoan()
+    {
+        loanUI = new LoanUI();
+        loanUI.start();
+    }
+    
     private void writeEnd()
     {
         System.out.println(" The System is shuting down ");
