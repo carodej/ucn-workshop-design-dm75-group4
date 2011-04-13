@@ -43,50 +43,70 @@ public class AddressCtr
      * @param   id  Instance variable for Person object
      * @return  p   Person object
      */
-    public String getPerson(int id)
+    public Person getPerson(int id)
     {
-        return addressBook.findPerson(id).print();
+        return addressBook.findPerson(id);
     }
     
+    public String getName(int id)
+    {
+        return getPerson(id).getName();
+    }
     
-    public void createPerson(int id, String name, String address, int zip, String city, String phoneNumber)
+    public String getAddress(int id)
+    {
+        return getPerson(id).getAddress();
+    }
+    
+    public int getZip(int id)
+    {
+        return getPerson(id).getZip();
+    }
+    
+    public String getCity(int id)
+    {
+        return getPerson(id).getCity();
+    }
+    
+    public String getPhoneNumber(int id)
+    {
+        return getPerson(id).getPhoneNumber();
+    }
+    
+    public void createPerson(String name, String address, int zip, String city, String phoneNumber)
     {   
-        Person p = new Person(id, name, address, zip, city, phoneNumber);
+        Person p = new Person(name, address, zip, city, phoneNumber);
         addressBook.addPerson(p);
     }
     
     public void deletePerson(int id)
     {
-        Person p = addressBook.findPerson(id);
-        if(p != null)
-        {
-            addressBook.removePerson(p);
-        }
+        addressBook.removePerson(id);
     }
     
     public void updatePerson(int id, String name, String address, int zip, String city, String phoneNumber)
     {
-        if(addressBook.findPerson(id) != null)
+        if(getPerson(id) != null)
         {
             if(name != null)
             {
-                addressBook.findPerson(id).setName(name);
+                getPerson(id).setName(name);
             }
             if(address != null)
             {
-                addressBook.findPerson(id).setAddress(address);
+                getPerson(id).setAddress(address);
             }
             if(zip != 0)
             {
-                addressBook.findPerson(id).setZip(zip);
+                getPerson(id).setZip(zip);
             }
             if(city != null)
             {
-                addressBook.findPerson(id).setCity(city);
+                getPerson(id).setCity(city);
             }
             if(phoneNumber != null)
             {
-                addressBook.findPerson(id).setPhoneNumber(phoneNumber);
+                getPerson(id).setPhoneNumber(phoneNumber);
             }
         }
     }

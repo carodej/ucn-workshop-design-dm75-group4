@@ -46,11 +46,11 @@ public class DvdUI
                     }
                     else{
                         if(choise == 4){
-                             deleteDVD();
+                             deleteDvd();
                         }
                         else{
                             if(choise == 5){
-                                listAllDvds();
+                                //listAllDvds();
                             }
                             else{
                                 exit = true;
@@ -82,9 +82,8 @@ public class DvdUI
    private void returnToMenu()
    {
        Scanner keyboard = new Scanner(System.in);
-       System.out.println(" (?) Return");
-       System.out.print("\n Enter any number to return: ");
-       keyboard.next();
+       System.out.print("\n Press enter to return");
+       keyboard.nextLine();
    }
     
     private int inputDvdId()
@@ -148,38 +147,70 @@ public class DvdUI
     private void findDvd()
     {     
         int id = inputDvdId();
-        String dvd = dvdCtr.getDvd(id);
-        System.out.println(dvd);
+        int index = 1;
+        try
+        {
+            System.out.println("ID:            " + id);
+            System.out.println("Title:         " + dvdCtr.getTitle(id));
+            System.out.println("Director:      " + dvdCtr.getDirector(id));
+            System.out.println("Release Date:  " + dvdCtr.getReleaseDate(id));
+            
+            while(index < dvdCtr.getDvd(id).numberOfCopies() + 1)
+            {
+                System.out.print("\n");
+                findCopy(id, index);
+                index++;
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("No DVD exist with the entered ID");
+        }
+        System.out.print("\n");
         returnToMenu();    
+    }
+    
+    private void findCopy(int id, int serialNo)
+    {
+        System.out.println("Serial Number:     " + serialNo);
+        System.out.println("Aquisition Date:   " + dvdCtr.getBuyDate(id, serialNo));
+        System.out.println("Aquisition Price:  " + dvdCtr.getBuyPrice(id, serialNo));
     }
     
     private void createDvd()
     {
-        int id = inputDvdId();
         String title = inputTitle();
         String director = inputDirector();
         String releaseDate = inputReleaseDate();
-        dvdCtr.createDvd(id, title, director, releaseDate);
+        dvdCtr.createDvd(title, director, releaseDate);
     }
     
     private void createCopy()
     {
-        int serialNo = inputCopyNo();
         String buyDate = inputBuyDate();
         double buyPrice = inputBuyPrice();
         int dvdId = inputDvdId();
-        
-        String result = dvdCtr.createCopy(serialNo, buyDate, buyPrice, dvdId);
-        System.out.println(result);
-        returnToMenu();
+        dvdCtr.createCopy(buyDate, buyPrice, dvdId);
     }
     
-    private void deleteDVD()
+    private void deleteDvd()
     {
-    }
-    private void listAllDvds()
-    {
-        System.out.println(dvdCtr.listAllDvds());
+        int dvdId = inputDvdId();
+        try
+        {
+            dvdCtr.getTitle(dvdId);
+            dvdCtr.deleteDvd(dvdId);
+            System.out.println("DVD with ID " + dvdId + " has been deleted");
+        }
+        catch(Exception e)
+        {
+            System.out.println("No DVD exist with the entered ID");
+        }
         returnToMenu();
     }
+//     private void listAllDvds()
+//     {
+//         System.out.println(dvdCtr.listAllDvds());
+//         returnToMenu();
+//     }
 }

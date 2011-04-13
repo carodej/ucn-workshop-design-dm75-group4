@@ -33,61 +33,82 @@ public class DvdCtr
         dvdCollection = dvdCollection.getInstance();   
     }
     
-    //Dummy implementation: after implementing the model layer 
-    //objects of class DVD are to be returned, not String
-    public String getDvd(int id)
+    /**
+     * Get methods regarding DVD
+     */
+    public Dvd getDvd(int id)
     {
-        String returnString = "";
-        if(dvdCollection.findDvd(id) != null)
-        {
-            returnString = dvdCollection.findDvd(id).print();
-        }
-        else
-        {
-            returnString = "No DVD found";
-        }
-        return returnString;
+        return dvdCollection.findDvd(id);
+    }
+   
+    public String getTitle(int id)
+    {
+        return getDvd(id).getTitle();
+    }
+    
+    public String getDirector(int id)
+    {
+        return getDvd(id).getDirector();
+    }
+    
+    public String getReleaseDate(int id)
+    {
+        return getDvd(id).getReleaseDate();
+    }
+    
+    /**
+     * Get methods regarding Copy
+     */
+    public Copy getCopy(int id, int serialNo)
+    {
+        return getDvd(id).findCopy(serialNo);
+    }
+    
+    public String getBuyDate(int id, int serialNo)
+    {
+        return getCopy(id, serialNo).getBuyDate();
+    }
+    
+    public double getBuyPrice(int id, int serialNo)
+    {
+        return getCopy(id, serialNo).getBuyPrice();
     }
     
     //Dummy implementation: more parameters are probaly to added
-    public void createDvd(int id, String title, String director, String releaseDate)
+    public void createDvd(String title, String director, String releaseDate)
     {       
-          Dvd d = new Dvd(id, title, director, releaseDate);
-          dvdCollection.addDvd(d);
+        Dvd d = new Dvd(title, director, releaseDate);
+        dvdCollection.addDvd(d);
     }
     
-    public void deleteDVD(long id)
+    public void deleteDvd(int id)
     {
-        
-        //search for the dvd and delete the object from the container
-       
+        dvdCollection.removeDvd(id);
     }
     
-    public String createCopy(int serialNo, String buyDate, double buyPrice, int id)
+    public void createCopy(String buyDate, double buyPrice, int id)
     {
-        String returnString = "";
-        Copy c = new Copy(serialNo, buyDate, buyPrice);
+        Copy c = new Copy(buyDate, buyPrice);
         if(dvdCollection.findDvd(id) != null)
         {
             dvdCollection.findDvd(id).addCopy(c);
-            returnString = "Copy added successfully";
         }
-        else
-        {
-            returnString = "DVD not found"; 
-        }
-        return returnString;
     }
     
-    
-    public String listAllDvds()
+    public int numberOfCopies(int id)
     {
-          ArrayList<Dvd> dvdList = dvdCollection.getDvds();
-          String returnString = "";
-          for(Dvd d : dvdList)
-          {
-              returnString += d.print() + "\n";
-          }
-          return returnString;
+        return dvdCollection.findDvd(id).numberOfCopies();
     }
+    
+    
+//     public String listAllDvds()
+//     {
+//           ArrayList<Dvd> dvdList = dvdCollection.getDvds();
+//           String returnString = "";
+//           for(Dvd d : dvdList)
+//           {
+//               returnString += d.print() + "\n";
+//           }
+//           return returnString;
+//     }
 }

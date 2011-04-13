@@ -36,15 +36,16 @@ public class AddressBookUI
           int choise = writeAddressBookMenu(); 
           if(choise == 1)
           {   //show person
+              
               getPerson();
           }
           else{
               if(choise == 2){
-                    //create person
+                    createPerson();
               }  
               else{
                   if(choise == 3){
-                      //delete person
+                      deletePerson();
                   }  
                   else{
                       if(choise == 4){
@@ -79,25 +80,31 @@ public class AddressBookUI
             int choise = keyboard.nextInt();
             return choise;
         }
-        
+    
+   private void returnToMenu()
+   {
+       Scanner keyboard = new Scanner(System.in);
+       System.out.print("\n Press enter to return");
+       keyboard.nextLine();
+   }    
     //the method reads id for a person and return
     // 
-    public long inputPersonsID()
+    public int inputPersonsID()
     {   
         boolean ok = false;
-        long id = 0;
+        int id = 0;
         while(!ok)
         {
         // makes an object keyboard to have input from the console
            Scanner keyboard = new Scanner(System.in);
            System.out.println(" Write Id:  ");
            try{
-             id = keyboard.nextLong();
+             id = keyboard.nextInt();
              ok = true;
            }
            catch (Exception e)
             {
-             System.out.println("Der skal indtastes et tal -  prøv igen");
+             System.out.println("Enter a number please...");
              String input = keyboard.nextLine();
            }
         }//end while
@@ -113,12 +120,12 @@ public class AddressBookUI
          return name;
     }
    
-    public String inputPostalCode()
+    public int inputPostalCode()
     {
          // makes an object keyboard to have input from the screen
          Scanner keyboard = new Scanner(System.in);  
          System.out.println(" Write Postal Code:  ");
-         String code = keyboard.nextLine();
+         int code = keyboard.nextInt();
          return code;
     }
     public String inputCity()
@@ -147,25 +154,66 @@ public class AddressBookUI
         return address;
     }
     
-    public void showId(long id)
-    {
-        System.out.println("ID of the person: " + id);
-    }
-    public void showName(String name)
-    { 
-        System.out.println("The name of the persone: " + name);
-    }
-    public void showAddress(String address)
-    { 
-        System.out.println("The address of the person: " + address);
-    }
+//     public void showId(long id)
+//     {
+//         System.out.println("ID of the person: " + id);
+//     }
+//     public void showName(String name)
+//     { 
+//         System.out.println("The name of the persone: " + name);
+//     }
+//     public void showAddress(String address)
+//     { 
+//         System.out.println("The address of the person: " + address);
+//     }
 
     private void getPerson()
-    {//is to be changed when the address book controller is completed
-        long id = inputPersonsID();
+    {
+        int id = inputPersonsID();
+        try
+        {
+            System.out.println("ID:            " + id);
+            System.out.println("Name:          " + addrCtr.getName(id));
+            System.out.println("Address:       " + addrCtr.getAddress(id));
+            System.out.println("Postal Code:   " + addrCtr.getZip(id));
+            System.out.println("City:          " + addrCtr.getCity(id));
+            System.out.println("Phone Number:  " + addrCtr.getPhoneNumber(id));
+        }
+        catch(Exception e)
+        {
+            System.out.println("No person exist with the entered ID");
+        }
+        System.out.print("\n");
+        returnToMenu();
         
 
-    }   
+    }
+    
+    private void createPerson()
+    {
+        String name = inputName();
+        String address = inputAddress();
+        int zip = inputPostalCode();
+        String city = inputCity();
+        String phoneNumber = inputPhone();
+        addrCtr.createPerson(name, address, zip, city, phoneNumber);
+    }
+    
+    private void deletePerson()
+    {
+        int id = inputPersonsID();
+        try
+        {
+            addrCtr.getName(id);
+            addrCtr.deletePerson(id);
+            System.out.println("Person with ID " + id + " has been deleted");
+        }
+        catch(Exception e)
+        {
+            System.out.println("No person exist with the entered ID");
+        }
+        returnToMenu();
+    }
 }
             
         
