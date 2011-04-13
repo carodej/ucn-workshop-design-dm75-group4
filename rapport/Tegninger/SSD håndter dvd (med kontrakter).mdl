@@ -186,7 +186,7 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	0
+		origin_y   	206
 		items      	(list diagram_item_list
 		    (object InterObjView "BRUGER" @2
 			location   	(440, 225)
@@ -213,7 +213,7 @@
 			fill_color 	13434879
 			quidu      	"4DA2E64803A1"
 			width      	300
-			height     	1414
+			height     	1155
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -233,42 +233,42 @@
 			    y_coord    	-89
 			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @5
-			    location   	(440, 712)
+			    location   	(440, 691)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	112
-			    y_coord    	22
+			    height     	118
+			    y_coord    	28
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @6
-			    location   	(440, 817)
+			    location   	(440, 796)
 			    line_color 	3342489
 			    InterObjView 	@2
 			    height     	1
 			    y_coord    	-89
 			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @7
-			    location   	(440, 1094)
+			    location   	(440, 962)
 			    line_color 	3342489
 			    InterObjView 	@2
 			    height     	106
 			    y_coord    	16
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @8
-			    location   	(440, 1199)
+			    location   	(440, 1067)
 			    line_color 	3342489
 			    InterObjView 	@2
 			    height     	1
 			    y_coord    	-89
 			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @9
-			    location   	(440, 1437)
+			    location   	(440, 1172)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	112
-			    y_coord    	22
+			    height     	118
+			    y_coord    	28
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @10
-			    location   	(440, 1542)
+			    location   	(440, 1277)
 			    line_color 	3342489
 			    InterObjView 	@2
 			    height     	1
@@ -299,7 +299,7 @@
 			fill_color 	13434879
 			quidu      	"4DA2E64A03BB"
 			width      	300
-			height     	1414
+			height     	1155
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -312,21 +312,21 @@
 			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @13
-			    location   	(1631, 712)
+			    location   	(1631, 691)
 			    line_color 	3342489
 			    InterObjView 	@11
 			    height     	105
 			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @14
-			    location   	(1631, 1094)
+			    location   	(1631, 962)
 			    line_color 	3342489
 			    InterObjView 	@11
 			    height     	105
 			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @15
-			    location   	(1631, 1437)
+			    location   	(1631, 1172)
 			    line_color 	3342489
 			    InterObjView 	@11
 			    height     	105
@@ -358,7 +358,7 @@
 			    quidu      	"4DA2E6680393"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	709
+			    max_width  	722
 			    justify    	0
 			    label      	"createDvd(title, director, releaseDate)"
 			    pctDist    	0.501529
@@ -373,7 +373,7 @@
 			terminus   	(1615, 408)
 			ordinal    	0)
 		    (object InterMessView "getDvd(id)" @18
-			location   	(0, 712)
+			location   	(0, 691)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -385,7 +385,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @19
 			    Parent_View 	@18
-			    location   	(1044, 685)
+			    location   	(1044, 664)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -409,11 +409,11 @@
 			supplier   	@11
 			Focus_Src  	@5
 			Focus_Entry 	@13
-			origin     	(455, 712)
-			terminus   	(1615, 712)
+			origin     	(455, 691)
+			terminus   	(1615, 691)
 			ordinal    	2)
 		    (object InterMessView "updateDvd(id)" @20
-			location   	(0, 1094)
+			location   	(0, 962)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -425,7 +425,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @21
 			    Parent_View 	@20
-			    location   	(1039, 1060)
+			    location   	(1039, 928)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -449,11 +449,11 @@
 			supplier   	@11
 			Focus_Src  	@7
 			Focus_Entry 	@14
-			origin     	(455, 1094)
-			terminus   	(1615, 1094)
+			origin     	(455, 962)
+			terminus   	(1615, 962)
 			ordinal    	4)
 		    (object InterMessView "deleteDvd(id)" @22
-			location   	(0, 1437)
+			location   	(0, 1172)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -465,7 +465,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @23
 			    Parent_View 	@22
-			    location   	(1040, 1407)
+			    location   	(1040, 1142)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -489,8 +489,8 @@
 			supplier   	@11
 			Focus_Src  	@9
 			Focus_Entry 	@15
-			origin     	(455, 1437)
-			terminus   	(1615, 1437)
+			origin     	(455, 1172)
+			terminus   	(1615, 1172)
 			ordinal    	6)
 		    (object Label @24
 			location   	(1891, 47)
@@ -552,7 +552,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @26
 			    Parent_View 	@25
-			    location   	(1039, 483)
+			    location   	(1038, 483)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -580,7 +580,7 @@
 			terminus   	(456, 513)
 			ordinal    	1)
 		    (object InterMessView "system return dvd.objekt" @27
-			location   	(0, 817)
+			location   	(0, 796)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -592,7 +592,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @28
 			    Parent_View 	@27
-			    location   	(1045, 786)
+			    location   	(1046, 765)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -616,11 +616,11 @@
 			supplier   	@2
 			Focus_Src  	@13
 			Focus_Entry 	@6
-			origin     	(1615, 817)
-			terminus   	(456, 817)
+			origin     	(1615, 796)
+			terminus   	(456, 796)
 			ordinal    	3)
 		    (object InterMessView "system return updated" @29
-			location   	(0, 1199)
+			location   	(0, 1067)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -632,7 +632,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @30
 			    Parent_View 	@29
-			    location   	(1047, 1174)
+			    location   	(1047, 1042)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -645,7 +645,7 @@
 			    quidu      	"4DA559E301C9"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	456
+			    max_width  	459
 			    justify    	0
 			    label      	"system return updated"
 			    pctDist    	0.490940
@@ -656,11 +656,11 @@
 			supplier   	@2
 			Focus_Src  	@14
 			Focus_Entry 	@8
-			origin     	(1615, 1199)
-			terminus   	(456, 1199)
+			origin     	(1615, 1067)
+			terminus   	(456, 1067)
 			ordinal    	5)
 		    (object InterMessView "system return deleted" @31
-			location   	(0, 1542)
+			location   	(0, 1277)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -672,7 +672,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @32
 			    Parent_View 	@31
-			    location   	(1051, 1511)
+			    location   	(1052, 1246)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -685,7 +685,7 @@
 			    quidu      	"4DA55A0200EC"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	444
+			    max_width  	447
 			    justify    	0
 			    label      	"system return deleted"
 			    pctDist    	0.486626
@@ -696,8 +696,8 @@
 			supplier   	@2
 			Focus_Src  	@15
 			Focus_Entry 	@10
-			origin     	(1615, 1542)
-			terminus   	(456, 1542)
+			origin     	(1615, 1277)
+			terminus   	(456, 1277)
 			ordinal    	7)))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"4DA2E5F90298"
