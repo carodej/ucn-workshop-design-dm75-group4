@@ -88,7 +88,7 @@
 				supplier   	"SYSTEM"
 				quidu      	"4DA430DE0210"
 				messages   	(list Messages
-				    (object Message "createCopy(serialNo, buyDate, buyPrice)"
+				    (object Message "createCopy(buyDate, buyPrice, status)"
 					quid       	"4DA43334000B"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
@@ -97,12 +97,12 @@
 					ordinal    	0
 					quidu      	"000000000000"
 					creation   	FALSE)
-				    (object Message "findCopy(serialNo)"
+				    (object Message "getCopy(serialNo)"
 					quid       	"4DA433A20031"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"3"
+					sequence   	"2"
 					ordinal    	2
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -111,7 +111,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"5"
+					sequence   	"3"
 					ordinal    	4
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -120,7 +120,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
-					sequence   	"7"
+					sequence   	"4"
 					ordinal    	6
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -129,7 +129,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"2"
+					sequence   	"1.1"
 					ordinal    	1
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -138,7 +138,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"4"
+					sequence   	"2.1"
 					ordinal    	3
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -147,7 +147,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"6"
+					sequence   	"3.1"
 					ordinal    	5
 					quidu      	"000000000000"
 					creation   	FALSE)
@@ -156,7 +156,7 @@
 					frequency  	"Aperiodic"
 					synchronization 	"Return"
 					dir        	"ToClientFromSupplier"
-					sequence   	"8"
+					sequence   	"4.1"
 					ordinal    	7
 					quidu      	"000000000000"
 					creation   	FALSE))))
@@ -213,7 +213,7 @@
 			fill_color 	13434879
 			quidu      	"4DA430DD002A"
 			width      	300
-			height     	1664
+			height     	1503
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -222,58 +222,58 @@
 			    location   	(378, 450)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	112
+			    y_coord    	22
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @4
-			    location   	(378, 637)
+			    location   	(378, 555)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @5
 			    location   	(378, 808)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	113
+			    y_coord    	23
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @6
-			    location   	(378, 991)
+			    location   	(378, 913)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @7
 			    location   	(378, 1173)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	119
+			    y_coord    	29
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @8
-			    location   	(378, 1353)
+			    location   	(378, 1278)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @9
 			    location   	(378, 1526)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
+			    height     	112
+			    y_coord    	22
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @10
-			    location   	(378, 1709)
+			    location   	(378, 1631)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
+			    height     	1
+			    y_coord    	-89
+			    Nested     	TRUE))
 		    (object InterObjView "SYSTEM" @11
 			location   	(1613, 225)
 			font       	(object Font
@@ -299,7 +299,7 @@
 			fill_color 	13434879
 			quidu      	"4DA430DE0210"
 			width      	300
-			height     	1664
+			height     	1503
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
@@ -308,59 +308,31 @@
 			    location   	(1613, 450)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @13
-			    location   	(1613, 637)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @14
 			    location   	(1613, 808)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @15
-			    location   	(1613, 991)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
 			    location   	(1613, 1173)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @17
-			    location   	(1613, 1353)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
 			    location   	(1613, 1526)
 			    line_color 	3342489
 			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @19
-			    location   	(1613, 1709)
-			    line_color 	3342489
-			    InterObjView 	@11
-			    height     	90
-			    y_coord    	0
+			    height     	105
+			    y_coord    	15
 			    Nested     	FALSE))
-		    (object InterMessView "createCopy(serialNo, buyDate, buyPrice)" @20
+		    (object InterMessView "createCopy(buyDate, buyPrice, status)" @16
 			location   	(0, 450)
 			font       	(object Font
 			    size       	10
@@ -371,9 +343,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @21
-			    Parent_View 	@20
-			    location   	(995, 406)
+			label      	(object SegLabel @17
+			    Parent_View 	@16
+			    location   	(995, 407)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -386,11 +358,11 @@
 			    quidu      	"4DA43334000B"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	791
+			    max_width  	743
 			    justify    	0
-			    label      	"createCopy(serialNo, buyDate, buyPrice)"
+			    label      	"createCopy(buyDate, buyPrice, status)"
 			    pctDist    	0.500000
-			    height     	45
+			    height     	44
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
@@ -400,7 +372,7 @@
 			origin     	(393, 450)
 			terminus   	(1597, 450)
 			ordinal    	0)
-		    (object InterMessView "findCopy(serialNo)" @22
+		    (object InterMessView "getCopy(serialNo)" @18
 			location   	(0, 808)
 			font       	(object Font
 			    size       	10
@@ -411,8 +383,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @23
-			    Parent_View 	@22
+			label      	(object SegLabel @19
+			    Parent_View 	@18
 			    location   	(995, 764)
 			    font       	(object Font
 				size       	10
@@ -426,9 +398,9 @@
 			    quidu      	"4DA433A20031"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	398
+			    max_width  	386
 			    justify    	0
-			    label      	"findCopy(serialNo)"
+			    label      	"getCopy(serialNo)"
 			    pctDist    	0.500000
 			    height     	45
 			    orientation 	0)
@@ -436,11 +408,11 @@
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@5
-			Focus_Entry 	@14
+			Focus_Entry 	@13
 			origin     	(393, 808)
 			terminus   	(1597, 808)
 			ordinal    	2)
-		    (object InterMessView "updateCopy(serialNo)" @24
+		    (object InterMessView "updateCopy(serialNo)" @20
 			location   	(0, 1173)
 			font       	(object Font
 			    size       	10
@@ -451,8 +423,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @25
-			    Parent_View 	@24
+			label      	(object SegLabel @21
+			    Parent_View 	@20
 			    location   	(995, 1129)
 			    font       	(object Font
 				size       	10
@@ -466,7 +438,7 @@
 			    quidu      	"4DA4343100E1"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	439
+			    max_width  	442
 			    justify    	0
 			    label      	"updateCopy(serialNo)"
 			    pctDist    	0.500000
@@ -476,11 +448,11 @@
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@7
-			Focus_Entry 	@16
+			Focus_Entry 	@14
 			origin     	(393, 1173)
 			terminus   	(1597, 1173)
 			ordinal    	4)
-		    (object InterMessView "deleteCopy(serialNo)" @26
+		    (object InterMessView "deleteCopy(serialNo)" @22
 			location   	(0, 1526)
 			font       	(object Font
 			    size       	10
@@ -491,8 +463,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @27
-			    Parent_View 	@26
+			label      	(object SegLabel @23
+			    Parent_View 	@22
 			    location   	(995, 1482)
 			    font       	(object Font
 				size       	10
@@ -506,7 +478,7 @@
 			    quidu      	"4DA4347C0031"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	426
+			    max_width  	430
 			    justify    	0
 			    label      	"deleteCopy(serialNo)"
 			    pctDist    	0.500000
@@ -516,11 +488,11 @@
 			client     	@2
 			supplier   	@11
 			Focus_Src  	@9
-			Focus_Entry 	@18
+			Focus_Entry 	@15
 			origin     	(393, 1526)
 			terminus   	(1597, 1526)
 			ordinal    	6)
-		    (object Label @28
+		    (object Label @24
 			location   	(1869, 60)
 			font       	(object Font
 			    size       	10
@@ -544,9 +516,9 @@
 |Post-betingelser:
 |- et copyobjekt copy blev oprettet
 |- copy blev associeret til c
-|- copy.serialNo, copy.buyDate, copy.buyPrice er blevet tilskrevet værdier
+|- copy.buyDate, copy.buyPrice copy.status er blevet tilskrevet værdier
 |
-|Operation: findCopy(serialNo)
+|Operation: getCopy(serialNo)
 |Use case: håndter Copy - CRUD
 |Type: Read
 |Pre-betingelser: Copyobjekt er oprettet og tilføjet til Collection c
@@ -567,8 +539,8 @@
 |Post-betingelser:
 |- copyobjektet copy er blevet slettet fra Collection c
 			)
-		    (object InterMessView "system return created" @29
-			location   	(0, 637)
+		    (object InterMessView "system return created" @25
+			location   	(0, 555)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -578,9 +550,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @30
-			    Parent_View 	@29
-			    location   	(996, 593)
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(996, 524)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -596,19 +568,19 @@
 			    max_width  	450
 			    justify    	0
 			    label      	"system return created"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.499584
+			    height     	32
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@13
+			Focus_Src  	@12
 			Focus_Entry 	@4
-			origin     	(1597, 637)
-			terminus   	(394, 637)
+			origin     	(1597, 555)
+			terminus   	(394, 555)
 			ordinal    	1)
-		    (object InterMessView "system return copyobjekt" @31
-			location   	(0, 991)
+		    (object InterMessView "system return copyobjekt" @27
+			location   	(0, 913)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -618,9 +590,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @32
-			    Parent_View 	@31
-			    location   	(996, 947)
+			label      	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(996, 879)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -636,19 +608,19 @@
 			    max_width  	513
 			    justify    	0
 			    label      	"system return copyobjekt"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.499584
+			    height     	35
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@15
+			Focus_Src  	@13
 			Focus_Entry 	@6
-			origin     	(1597, 991)
-			terminus   	(394, 991)
+			origin     	(1597, 913)
+			terminus   	(394, 913)
 			ordinal    	3)
-		    (object InterMessView "system return updated" @33
-			location   	(0, 1353)
+		    (object InterMessView "system return updated" @29
+			location   	(0, 1278)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -658,9 +630,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @34
-			    Parent_View 	@33
-			    location   	(996, 1309)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(996, 1248)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -676,19 +648,19 @@
 			    max_width  	460
 			    justify    	0
 			    label      	"system return updated"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.499584
+			    height     	31
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@17
+			Focus_Src  	@14
 			Focus_Entry 	@8
-			origin     	(1597, 1353)
-			terminus   	(394, 1353)
+			origin     	(1597, 1278)
+			terminus   	(394, 1278)
 			ordinal    	5)
-		    (object InterMessView "system return deleted" @35
-			location   	(0, 1709)
+		    (object InterMessView "system return deleted" @31
+			location   	(0, 1631)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -698,9 +670,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @36
-			    Parent_View 	@35
-			    location   	(996, 1665)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(1000, 1598)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -716,16 +688,16 @@
 			    max_width  	447
 			    justify    	0
 			    label      	"system return deleted"
-			    pctDist    	0.500000
-			    height     	45
+			    pctDist    	0.496259
+			    height     	34
 			    orientation 	1)
 			line_color 	3342489
 			client     	@11
 			supplier   	@2
-			Focus_Src  	@19
+			Focus_Src  	@15
 			Focus_Entry 	@10
-			origin     	(1597, 1709)
-			terminus   	(394, 1709)
+			origin     	(1597, 1631)
+			terminus   	(394, 1631)
 			ordinal    	7)))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"4DA2E5F90298"
