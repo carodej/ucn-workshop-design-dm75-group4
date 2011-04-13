@@ -81,114 +81,6 @@
 	    (object Mechanism @1
 		logical_models 	(list unit_reference_list
 		    (object Object "BRUGER"
-			quid       	"4DA2E64803A1"
-			collaborators 	(list link_list
-			    (object Link
-				quid       	"4DA2E6680392"
-				supplier   	"SYSTEM"
-				quidu      	"4DA2E64A03BB"
-				messages   	(list Messages
-				    (object Message "createDvd(id, title, director, releaseDate)"
-					quid       	"4DA2E6680393"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"1"
-					ordinal    	0
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "getDvd(id)"
-					quid       	"4DA2E68E0393"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"2"
-					ordinal    	1
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "updateDvd(id)"
-					quid       	"4DA2E69A00EB"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"3"
-					ordinal    	2
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "deleteDvd(id)"
-					quid       	"4DA2E6BD00DA"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"4"
-					ordinal    	3
-					quidu      	"000000000000"
-					creation   	FALSE))))
-			persistence 	"Transient"
-			creationObj 	TRUE
-			multi      	FALSE)
-		    (object Object "SYSTEM"
-			quid       	"4DA2E64A03BB"
-			persistence 	"Transient"
-			creationObj 	TRUE
-			multi      	FALSE)))
-	    (object Mechanism @2
-		logical_models 	(list unit_reference_list
-		    (object Object "BRUGER"
-			quid       	"4DA430DD002A"
-			collaborators 	(list link_list
-			    (object Link
-				quid       	"4DA43334000A"
-				supplier   	"SYSTEM"
-				quidu      	"4DA430DE0210"
-				messages   	(list Messages
-				    (object Message "createCopy(serialNo, buyDate, buyPrice)"
-					quid       	"4DA43334000B"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"1"
-					ordinal    	0
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "findCopy(serialNo)"
-					quid       	"4DA433A20031"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"2"
-					ordinal    	1
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "updateCopy(serialNo)"
-					quid       	"4DA4343100E1"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"3"
-					ordinal    	2
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "deleteCopy(serialNo)"
-					quid       	"4DA4347C0031"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"4"
-					ordinal    	3
-					quidu      	"000000000000"
-					creation   	FALSE))))
-			persistence 	"Transient"
-			creationObj 	FALSE
-			multi      	FALSE)
-		    (object Object "SYSTEM"
-			quid       	"4DA430DE0210"
-			persistence 	"Transient"
-			creationObj 	FALSE
-			multi      	FALSE)))
-	    (object Mechanism @3
-		logical_models 	(list unit_reference_list
-		    (object Object "BRUGER"
 			quid       	"4DA43C6D002A"
 			collaborators 	(list link_list
 			    (object Link
@@ -196,7 +88,7 @@
 				supplier   	"SYSTEM"
 				quidu      	"4DA43C6E0112"
 				messages   	(list Messages
-				    (object Message "createLend(id, date, period, status)"
+				    (object Message "createLoan(id, date, period, status)"
 					quid       	"4DA43C8302EB"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
@@ -205,17 +97,8 @@
 					ordinal    	0
 					quidu      	"000000000000"
 					creation   	FALSE)
-				    (object Message "findLend(id)"
+				    (object Message "findLoan(id)"
 					quid       	"4DA43CF80251"
-					frequency  	"Aperiodic"
-					synchronization 	"Simple"
-					dir        	"FromClientToSupplier"
-					sequence   	"2"
-					ordinal    	1
-					quidu      	"000000000000"
-					creation   	FALSE)
-				    (object Message "updateLend(id)"
-					quid       	"4DA43D0701BA"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
@@ -223,13 +106,58 @@
 					ordinal    	2
 					quidu      	"000000000000"
 					creation   	FALSE)
-				    (object Message "deleteLend(id)"
+				    (object Message "updateLoan(id)"
+					quid       	"4DA43D0701BA"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"5"
+					ordinal    	4
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "deleteLoan(id)"
 					quid       	"4DA43D160192"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
+					sequence   	"7"
+					ordinal    	6
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "system return created"
+					quid       	"4DA55B6600E5"
+					frequency  	"Aperiodic"
+					synchronization 	"Return"
+					dir        	"ToClientFromSupplier"
+					sequence   	"2"
+					ordinal    	1
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "system return loanobjekt"
+					quid       	"4DA55B780106"
+					frequency  	"Aperiodic"
+					synchronization 	"Return"
+					dir        	"ToClientFromSupplier"
 					sequence   	"4"
 					ordinal    	3
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "system return updated"
+					quid       	"4DA55BA101CE"
+					frequency  	"Aperiodic"
+					synchronization 	"Return"
+					dir        	"ToClientFromSupplier"
+					sequence   	"6"
+					ordinal    	5
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "system return deleted"
+					quid       	"4DA55BAF0022"
+					frequency  	"Aperiodic"
+					synchronization 	"Return"
+					dir        	"ToClientFromSupplier"
+					sequence   	"8"
+					ordinal    	7
 					quidu      	"000000000000"
 					creation   	FALSE))))
 			persistence 	"Transient"
@@ -250,690 +178,17 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list))
-	    (object InteractionDiagram "SSD - håndter DVD"
-		mechanism_ref 	@1
-		quid       	"4DA2E6320330"
-		title      	"SSD - håndter DVD"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list
-		    (object InterObjView "BRUGER" @4
-			location   	(438, 231)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	TRUE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@4
-			    location   	(438, 231)
-			    fill_color 	13434879
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	282
-			    justify    	0
-			    label      	"BRUGER")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4DA2E64803A1"
-			width      	300
-			height     	816
-			icon_height 	0
-			icon_width 	0
-			icon_y_offset 	0
-			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @5
-			    location   	(438, 311)
-			    line_color 	3342489
-			    InterObjView 	@4
-			    height     	137
-			    y_coord    	47
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @6
-			    location   	(438, 508)
-			    line_color 	3342489
-			    InterObjView 	@4
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @7
-			    location   	(438, 689)
-			    line_color 	3342489
-			    InterObjView 	@4
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @8
-			    location   	(438, 867)
-			    line_color 	3342489
-			    InterObjView 	@4
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
-		    (object InterObjView "SYSTEM" @9
-			location   	(1631, 234)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	TRUE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@9
-			    location   	(1631, 234)
-			    fill_color 	13434879
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	282
-			    justify    	0
-			    label      	"SYSTEM")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4DA2E64A03BB"
-			width      	300
-			height     	813
-			icon_height 	0
-			icon_width 	0
-			icon_y_offset 	0
-			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @10
-			    location   	(1631, 314)
-			    line_color 	3342489
-			    InterObjView 	@9
-			    height     	104
-			    y_coord    	14
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @11
-			    location   	(1631, 358)
-			    line_color 	3342489
-			    InterObjView 	@9
-			    height     	90
-			    y_coord    	0
-			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @12
-			    location   	(1631, 508)
-			    line_color 	3342489
-			    InterObjView 	@9
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @13
-			    location   	(1631, 689)
-			    line_color 	3342489
-			    InterObjView 	@9
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @14
-			    location   	(1631, 867)
-			    line_color 	3342489
-			    InterObjView 	@9
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
-		    (object InterMessView "createDvd(id, title, director, releaseDate)" @15
-			location   	(0, 358)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @16
-			    Parent_View 	@15
-			    location   	(1035, 332)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA2E6680393"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	790
-			    justify    	0
-			    label      	"createDvd(id, title, director, releaseDate)"
-			    pctDist    	0.501529
-			    height     	27
-			    orientation 	0)
-			line_color 	3342489
-			client     	@4
-			supplier   	@9
-			Focus_Src  	@5
-			Focus_Entry 	@11
-			origin     	(453, 358)
-			terminus   	(1615, 358)
-			ordinal    	0)
-		    (object InterMessView "getDvd(id)" @17
-			location   	(0, 508)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @18
-			    Parent_View 	@17
-			    location   	(1043, 481)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA2E68E0393"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	222
-			    justify    	0
-			    label      	"getDvd(id)"
-			    pctDist    	0.508606
-			    height     	28
-			    orientation 	0)
-			line_color 	3342489
-			client     	@4
-			supplier   	@9
-			Focus_Src  	@6
-			Focus_Entry 	@12
-			origin     	(453, 508)
-			terminus   	(1615, 508)
-			ordinal    	1)
-		    (object InterMessView "updateDvd(id)" @19
-			location   	(0, 689)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @20
-			    Parent_View 	@19
-			    location   	(1038, 655)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA2E69A00EB"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	294
-			    justify    	0
-			    label      	"updateDvd(id)"
-			    pctDist    	0.503568
-			    height     	35
-			    orientation 	0)
-			line_color 	3342489
-			client     	@4
-			supplier   	@9
-			Focus_Src  	@7
-			Focus_Entry 	@13
-			origin     	(453, 689)
-			terminus   	(1615, 689)
-			ordinal    	2)
-		    (object InterMessView "deleteDvd(id)" @21
-			location   	(0, 867)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @22
-			    Parent_View 	@21
-			    location   	(1039, 837)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA2E6BD00DA"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	281
-			    justify    	0
-			    label      	"deleteDvd(id)"
-			    pctDist    	0.504587
-			    height     	31
-			    orientation 	0)
-			line_color 	3342489
-			client     	@4
-			supplier   	@9
-			Focus_Src  	@8
-			Focus_Entry 	@14
-			origin     	(453, 867)
-			terminus   	(1615, 867)
-			ordinal    	3)
-		    (object Label @23
-			location   	(1891, 47)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			nlines     	31
-			max_width  	1443
-			justify    	1
-			label      	
-|Operations kontrakter:
-|
-|Operation: createDvd(id, title, director, releaseDate)
-|Use case: håndter DVD - CRUD
-|Type: Create
-|Pre-betingelser: DVDCollection c er oprettet
-|Post-betingelser:
-|- dvdobjektet dvd blev oprettet
-|- dvd blev associeret til c
-|- dvd.id, dvd.title, dvd.director, dvd.releaseDate er blevet tilsrkevet værdier
-|
-|Operation: getDvd(id)
-|Usecase: håndter DVD - CRUD
-|Type: Read
-|Pre-betingelser: DVD oprettet og tilføjet til DVDCollection
-|Post-betingerlser:
-|- dvdobjektet dvd blev fundet på det søgte dvd.id
-|
-|Operation: updateDvd(id)
-|Usecase: håndter DVD - CRUD
-|Type: Update
-|Pre-betingelser: DVD oprettet og fundet i DVDCollection
-|Post-betingelser:
-|- dvdobjektet dvd er blevet opdateret og gemt i DVDCollection
-|
-|Operation: deleteDvd(id)
-|Usecase: håndter DVD - CRUD
-|Type: Update
-|Pre-betingelser: DVD oprettet og fundet i DVDCollection
-|Post-betingerlser:
-|-dvdobjektet dvd er slettet fra DVDCollection
-			)))
-	    (object InteractionDiagram "SSD - håndter Eksemplar"
-		mechanism_ref 	@2
-		quid       	"4DA430CF0126"
-		title      	"SSD - håndter Eksemplar"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list
-		    (object InterObjView "BRUGER" @24
-			location   	(378, 225)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	TRUE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@24
-			    location   	(378, 225)
-			    fill_color 	13434879
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	282
-			    justify    	0
-			    label      	"BRUGER")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4DA430DD002A"
-			width      	300
-			height     	941
-			icon_height 	0
-			icon_width 	0
-			icon_y_offset 	0
-			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @25
-			    location   	(378, 450)
-			    line_color 	3342489
-			    InterObjView 	@24
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @26
-			    location   	(378, 626)
-			    line_color 	3342489
-			    InterObjView 	@24
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @27
-			    location   	(378, 805)
-			    line_color 	3342489
-			    InterObjView 	@24
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @28
-			    location   	(378, 986)
-			    line_color 	3342489
-			    InterObjView 	@24
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
-		    (object InterObjView "SYSTEM" @29
-			location   	(1613, 225)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	TRUE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@29
-			    location   	(1613, 225)
-			    fill_color 	13434879
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	282
-			    justify    	0
-			    label      	"SYSTEM")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4DA430DE0210"
-			width      	300
-			height     	941
-			icon_height 	0
-			icon_width 	0
-			icon_y_offset 	0
-			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @30
-			    location   	(1613, 450)
-			    line_color 	3342489
-			    InterObjView 	@29
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @31
-			    location   	(1613, 626)
-			    line_color 	3342489
-			    InterObjView 	@29
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @32
-			    location   	(1613, 805)
-			    line_color 	3342489
-			    InterObjView 	@29
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @33
-			    location   	(1613, 986)
-			    line_color 	3342489
-			    InterObjView 	@29
-			    height     	90
-			    y_coord    	0
-			    Nested     	FALSE))
-		    (object InterMessView "createCopy(serialNo, buyDate, buyPrice)" @34
-			location   	(0, 450)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @35
-			    Parent_View 	@34
-			    location   	(995, 406)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA43334000B"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	791
-			    justify    	0
-			    label      	"createCopy(serialNo, buyDate, buyPrice)"
-			    pctDist    	0.500000
-			    height     	45
-			    orientation 	0)
-			line_color 	3342489
-			client     	@24
-			supplier   	@29
-			Focus_Src  	@25
-			Focus_Entry 	@30
-			origin     	(393, 450)
-			terminus   	(1597, 450)
-			ordinal    	0)
-		    (object InterMessView "findCopy(serialNo)" @36
-			location   	(0, 626)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @37
-			    Parent_View 	@36
-			    location   	(995, 582)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA433A20031"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	398
-			    justify    	0
-			    label      	"findCopy(serialNo)"
-			    pctDist    	0.500000
-			    height     	45
-			    orientation 	0)
-			line_color 	3342489
-			client     	@24
-			supplier   	@29
-			Focus_Src  	@26
-			Focus_Entry 	@31
-			origin     	(393, 626)
-			terminus   	(1597, 626)
-			ordinal    	1)
-		    (object InterMessView "updateCopy(serialNo)" @38
-			location   	(0, 805)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @39
-			    Parent_View 	@38
-			    location   	(995, 761)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA4343100E1"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	439
-			    justify    	0
-			    label      	"updateCopy(serialNo)"
-			    pctDist    	0.500000
-			    height     	45
-			    orientation 	0)
-			line_color 	3342489
-			client     	@24
-			supplier   	@29
-			Focus_Src  	@27
-			Focus_Entry 	@32
-			origin     	(393, 805)
-			terminus   	(1597, 805)
-			ordinal    	2)
-		    (object InterMessView "deleteCopy(serialNo)" @40
-			location   	(0, 986)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object SegLabel @41
-			    Parent_View 	@40
-			    location   	(995, 942)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    quidu      	"4DA4347C0031"
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	426
-			    justify    	0
-			    label      	"deleteCopy(serialNo)"
-			    pctDist    	0.500000
-			    height     	45
-			    orientation 	0)
-			line_color 	3342489
-			client     	@24
-			supplier   	@29
-			Focus_Src  	@28
-			Focus_Entry 	@33
-			origin     	(393, 986)
-			terminus   	(1597, 986)
-			ordinal    	3)
-		    (object Label @42
-			location   	(1869, 60)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			nlines     	33
-			max_width  	1457
-			justify    	1
-			label      	
-|Operations kontrakter:
-|
-|Operation: createCopy(serialNo, buyDate, buyPrice)
-|Use case: håndter Copy - CRUD
-|Type: Create
-|Pre-betingelser: ArrayList a er oprettet
-|Post-betingelser:
-|- et copyobjekt copy blev oprettet
-|- copy blev associeret til a
-|- copy.serialNo, copy.buyDate, copy.buyPrice er blevet tilskrevet værdier
-|
-|Operation: findCopy(serialNo)
-|Use case: håndter Copy - CRUD
-|Type: Read
-|Pre-betingelser: Copyobjekt er oprettet og tilføjet til ArrayListen
-|Post-betingelser:
-|- copyobjektet copy er fundet på det søgte copy.serialNo
-|
-|Operation: updateCopy(serialNo)
-|Use case: håndter Copy - CRUD
-|Type: Update
-|Pre-betingelser: Copyobjekt er oprettet og fundet i ArrayListen
-|Post-betingelser:
-|- copyobjektet copy er blevet opdateret og gemt i ArrayListen
-|
-|Operation: deleteCopy(serialNo)
-|Use case: håndter Copy - CRUD
-|Type: Update
-|Pre-betingelser: Copyobjekt er oprettet og fundet i ArrayListen
-|Post-betingelser:
-|- copyobjektet copy er blevet slettet fra ArrayListen
-			)))
 	    (object InteractionDiagram "SSD - håndter Udlån"
-		mechanism_ref 	@3
+		mechanism_ref 	@1
 		quid       	"4DA43C030030"
 		title      	"SSD - håndter Udlån"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	840
-		origin_y   	19
+		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "BRUGER" @43
+		    (object InterObjView "BRUGER" @2
 			location   	(491, 225)
 			font       	(object Font
 			    size       	10
@@ -945,7 +200,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@43
+			    Parent_View 	@2
 			    location   	(491, 225)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -958,40 +213,68 @@
 			fill_color 	13434879
 			quidu      	"4DA43C6D002A"
 			width      	300
-			height     	880
+			height     	1648
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @44
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
 			    location   	(491, 397)
 			    line_color 	3342489
-			    InterObjView 	@43
+			    InterObjView 	@2
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @45
-			    location   	(491, 569)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(491, 597)
 			    line_color 	3342489
-			    InterObjView 	@43
+			    InterObjView 	@2
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @46
-			    location   	(491, 753)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(491, 770)
 			    line_color 	3342489
-			    InterObjView 	@43
+			    InterObjView 	@2
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @47
-			    location   	(491, 925)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(491, 946)
 			    line_color 	3342489
-			    InterObjView 	@43
+			    InterObjView 	@2
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(491, 1123)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(491, 1311)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @9
+			    location   	(491, 1501)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(491, 1693)
+			    line_color 	3342489
+			    InterObjView 	@2
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "SYSTEM" @48
+		    (object InterObjView "SYSTEM" @11
 			location   	(1844, 225)
 			font       	(object Font
 			    size       	10
@@ -1003,7 +286,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@48
+			    Parent_View 	@11
 			    location   	(1844, 225)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -1016,40 +299,68 @@
 			fill_color 	13434879
 			quidu      	"4DA43C6E0112"
 			width      	300
-			height     	880
+			height     	1648
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @49
+			Focus_Of_Control 	(object Focus_Of_Control "" @12
 			    location   	(1844, 397)
 			    line_color 	3342489
-			    InterObjView 	@48
+			    InterObjView 	@11
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @50
-			    location   	(1844, 569)
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(1844, 597)
 			    line_color 	3342489
-			    InterObjView 	@48
+			    InterObjView 	@11
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @51
-			    location   	(1844, 753)
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
+			    location   	(1844, 770)
 			    line_color 	3342489
-			    InterObjView 	@48
+			    InterObjView 	@11
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @52
-			    location   	(1844, 925)
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1844, 946)
 			    line_color 	3342489
-			    InterObjView 	@48
+			    InterObjView 	@11
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(1844, 1123)
+			    line_color 	3342489
+			    InterObjView 	@11
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(1844, 1311)
+			    line_color 	3342489
+			    InterObjView 	@11
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(1844, 1501)
+			    line_color 	3342489
+			    InterObjView 	@11
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @19
+			    location   	(1844, 1693)
+			    line_color 	3342489
+			    InterObjView 	@11
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterMessView "createLend(id, date, period, status)" @53
+		    (object InterMessView "createLoan(id, date, period, status)" @20
 			location   	(0, 397)
 			font       	(object Font
 			    size       	10
@@ -1060,8 +371,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @54
-			    Parent_View 	@53
+			label      	(object SegLabel @21
+			    Parent_View 	@20
 			    location   	(1167, 353)
 			    font       	(object Font
 				size       	10
@@ -1075,22 +386,22 @@
 			    quidu      	"4DA43C8302EB"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	688
+			    max_width  	672
 			    justify    	0
-			    label      	"createLend(id, date, period, status)"
+			    label      	"createLoan(id, date, period, status)"
 			    pctDist    	0.500000
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@43
-			supplier   	@48
-			Focus_Src  	@44
-			Focus_Entry 	@49
+			client     	@2
+			supplier   	@11
+			Focus_Src  	@3
+			Focus_Entry 	@12
 			origin     	(506, 397)
 			terminus   	(1828, 397)
 			ordinal    	0)
-		    (object InterMessView "findLend(id)" @55
-			location   	(0, 569)
+		    (object InterMessView "findLoan(id)" @22
+			location   	(0, 770)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1100,9 +411,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @56
-			    Parent_View 	@55
-			    location   	(1167, 525)
+			label      	(object SegLabel @23
+			    Parent_View 	@22
+			    location   	(1167, 726)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1115,22 +426,22 @@
 			    quidu      	"4DA43CF80251"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	256
+			    max_width  	250
 			    justify    	0
-			    label      	"findLend(id)"
+			    label      	"findLoan(id)"
 			    pctDist    	0.500000
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@43
-			supplier   	@48
-			Focus_Src  	@45
-			Focus_Entry 	@50
-			origin     	(506, 569)
-			terminus   	(1828, 569)
-			ordinal    	1)
-		    (object InterMessView "updateLend(id)" @57
-			location   	(0, 753)
+			client     	@2
+			supplier   	@11
+			Focus_Src  	@5
+			Focus_Entry 	@14
+			origin     	(506, 770)
+			terminus   	(1828, 770)
+			ordinal    	2)
+		    (object InterMessView "updateLoan(id)" @24
+			location   	(0, 1123)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1140,9 +451,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @58
-			    Parent_View 	@57
-			    location   	(1167, 709)
+			label      	(object SegLabel @25
+			    Parent_View 	@24
+			    location   	(1167, 1079)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1155,22 +466,22 @@
 			    quidu      	"4DA43D0701BA"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	316
+			    max_width  	312
 			    justify    	0
-			    label      	"updateLend(id)"
+			    label      	"updateLoan(id)"
 			    pctDist    	0.500000
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@43
-			supplier   	@48
-			Focus_Src  	@46
-			Focus_Entry 	@51
-			origin     	(506, 753)
-			terminus   	(1828, 753)
-			ordinal    	2)
-		    (object InterMessView "deleteLend(id)" @59
-			location   	(0, 925)
+			client     	@2
+			supplier   	@11
+			Focus_Src  	@7
+			Focus_Entry 	@16
+			origin     	(506, 1123)
+			terminus   	(1828, 1123)
+			ordinal    	4)
+		    (object InterMessView "deleteLoan(id)" @26
+			location   	(0, 1501)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1180,9 +491,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @60
-			    Parent_View 	@59
-			    location   	(1167, 881)
+			label      	(object SegLabel @27
+			    Parent_View 	@26
+			    location   	(1167, 1457)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1195,21 +506,21 @@
 			    quidu      	"4DA43D160192"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	303
+			    max_width  	297
 			    justify    	0
-			    label      	"deleteLend(id)"
+			    label      	"deleteLoan(id)"
 			    pctDist    	0.500000
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@43
-			supplier   	@48
-			Focus_Src  	@47
-			Focus_Entry 	@52
-			origin     	(506, 925)
-			terminus   	(1828, 925)
-			ordinal    	3)
-		    (object Label @61
+			client     	@2
+			supplier   	@11
+			Focus_Src  	@9
+			Focus_Entry 	@18
+			origin     	(506, 1501)
+			terminus   	(1828, 1501)
+			ordinal    	6)
+		    (object Label @28
 			location   	(2099, 116)
 			font       	(object Font
 			    size       	10
@@ -1226,36 +537,196 @@
 			label      	
 |Operations kontrakter:
 |
-|Operation: createLend(id, date, period, status)
-|Use case: håndter Lending - CRUD
+|Operation: createLoan(id, date, period, status)
+|Use case: håndter Loan - CRUD
 |Type: Create
-|Pre-betingelser: ArrayList a er oprettet
+|Pre-betingelser: Collection c er oprettet
 |Post-betingelser:
-|- et lendingobjekt lend blev oprettet
-|- lend blev associeret til a
-|- lend.id, lend.date, lend.period, lend.status er blevet tilskrevet værdier
+|- et loanobjekt lend blev oprettet
+|- loan blev associeret til c
+|- loan.id, loan.date, loan.period, loan.status er blevet tilskrevet værdier
 |
-|Operation: findCopy(id)
-|Use case: håndter Lending - CRUD
+|Operation: findLoan(id)
+|Use case: håndter Loan - CRUD
 |Type: Read
-|Pre-betingelser: Lendobjekt er oprettet og tilføjet til ArrayListen
+|Pre-betingelser: Loanobjekt er oprettet og tilføjet til Collection c
 |Post-betingelser:
-|- lendobjektet lend er fundet på det søgte lend.id
+|- loanobjektet loan er fundet på det søgte loan.id
 |
-|Operation: updateLend(id)
-|Use case: håndter Lending - CRUD
+|Operation: updateLoan(id)
+|Use case: håndter Loan - CRUD
 |Type: Update
-|Pre-betingelser: Lendobjekt er oprettet og fundet i ArrayListen
+|Pre-betingelser: Loanobjekt er oprettet og fundet i Collection c
 |Post-betingelser:
-|- lendobjektet lend er blevet opdateret og gemt i ArrayListen
+|- loanobjektet loan er blevet opdateret og gemt i Collection c
 |
-|Operation: deleteLend(id)
-|Use case: håndter Lending - CRUD
+|Operation: deleteLoan(id)
+|Use case: håndter Loan - CRUD
 |Type: Update
-|Pre-betingelser: Lendobjekt er oprettet og fundet i ArrayListen
+|Pre-betingelser: Loanobjekt er oprettet og fundet i Collection c
 |Post-betingelser:
-|- lendobjektet lend er blevet slettet fra ArrayListen
-			)))))
+|- loanobjektet loan er blevet slettet fra Collection c
+			)
+		    (object InterMessView "system return created" @29
+			location   	(0, 597)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(1168, 553)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"4DA55B6600E5"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	444
+			    justify    	0
+			    label      	"system return created"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@11
+			supplier   	@2
+			Focus_Src  	@13
+			Focus_Entry 	@4
+			origin     	(1828, 597)
+			terminus   	(507, 597)
+			ordinal    	1)
+		    (object InterMessView "system return loanobjekt" @31
+			location   	(0, 946)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(1168, 902)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"4DA55B780106"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	501
+			    justify    	0
+			    label      	"system return loanobjekt"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@11
+			supplier   	@2
+			Focus_Src  	@15
+			Focus_Entry 	@6
+			origin     	(1828, 946)
+			terminus   	(507, 946)
+			ordinal    	3)
+		    (object InterMessView "system return updated" @33
+			location   	(0, 1311)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @34
+			    Parent_View 	@33
+			    location   	(1168, 1267)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"4DA55BA101CE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	456
+			    justify    	0
+			    label      	"system return updated"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@11
+			supplier   	@2
+			Focus_Src  	@17
+			Focus_Entry 	@8
+			origin     	(1828, 1311)
+			terminus   	(507, 1311)
+			ordinal    	5)
+		    (object InterMessView "system return deleted" @35
+			location   	(0, 1693)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @36
+			    Parent_View 	@35
+			    location   	(1168, 1649)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"4DA55BAF0022"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	444
+			    justify    	0
+			    label      	"system return deleted"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@11
+			supplier   	@2
+			Focus_Src  	@19
+			Focus_Entry 	@10
+			origin     	(1828, 1693)
+			terminus   	(507, 1693)
+			ordinal    	7)))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"4DA2E5F90298"
 	exportControl 	"Public"
