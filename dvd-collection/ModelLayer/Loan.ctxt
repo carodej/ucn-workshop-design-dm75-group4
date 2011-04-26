@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=date\ period\ status\ person\ copy
+comment0.target=Loan(java.lang.String,\ java.lang.String,\ java.lang.String,\ Person,\ Copy)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Loan\r\n
+comment1.params=
+comment1.target=java.lang.String\ getDate()
+comment1.text=\r\n\ Get\ and\ set\ methods\r\n
+comment2.params=
+comment2.target=java.lang.String\ getPeriod()
+comment3.params=
+comment3.target=java.lang.String\ getStatus()
+comment4.params=
+comment4.target=Copy\ getCopy()
+comment5.params=
+comment5.target=Person\ getPerson()
+numComments=6

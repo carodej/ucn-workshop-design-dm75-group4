@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LoanCollection\ getInstance()
+comment1.params=
+comment1.target=LoanCollection()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LoanCollection\r\n
+comment2.params=
+comment2.target=int\ getNextId()
+comment3.params=loan
+comment3.target=void\ addLoan(Loan)
+comment3.text=\r\n\ Method\ for\ adding\ a\ Loan\ to\ the\ HashMap\r\n
+comment4.params=id
+comment4.target=Loan\ findLoan(int)
+comment5.params=id
+comment5.target=void\ removeLoan(int)
+numComments=6
