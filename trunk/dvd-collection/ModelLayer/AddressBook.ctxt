@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AddressBook\ getInstance()
+comment0.text=\r\n\ From\ container\ to\ Singleton\r\n
+comment1.params=
+comment1.target=AddressBook()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ AddressBook\r\n
+comment2.params=
+comment2.target=int\ getNextId()
+comment3.params=p
+comment3.target=void\ addPerson(Person)
+comment3.text=\r\n\ Add\ method,\ for\ adding\ a\ Person\ to\ the\ HashMap\r\n\ \r\n\ @param\ \ \ p\ \ \ Person\ object\r\n
+comment4.params=id
+comment4.target=void\ removePerson(int)
+comment4.text=\r\n\ Remove\ method,\ for\ removing\ a\ Person\ from\ the\ HashMap\r\n
+comment5.params=id
+comment5.target=Person\ findPerson(int)
+comment5.text=\r\n\ Search\ method,\ for\ finding\ a\ Person\ in\ the\ HashMap\r\n\ \r\n\ @param\ \ \ id\ \ Instance\ variable\ for\ Person\r\n\ @return\ \ p\ \ \ Person\ object\r\n
+numComments=6

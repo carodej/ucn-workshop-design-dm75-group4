@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DvdCollection\ getInstance()
+comment1.params=
+comment1.target=DvdCollection()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ DvdCollection\r\n
+comment2.params=
+comment2.target=int\ getNextId()
+comment3.params=d
+comment3.target=void\ addDvd(Dvd)
+comment3.text=\r\n\ Add\ method,\ for\ adding\ a\ dvd\ to\ the\ HashMap\r\n\ \r\n\ @param\ \ \ d\ \ \ Dvd\ object\r\n
+comment4.params=id
+comment4.target=void\ removeDvd(int)
+comment5.params=id
+comment5.target=Dvd\ findDvd(int)
+numComments=6
